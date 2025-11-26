@@ -17,7 +17,7 @@ const AllAppsPage = () => {
   const limit = 12;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/apps?limit=${limit}&skip=${limit * (currentPage - 1)}&sort=${sort}&order=${order}&search=${searchText}`)
+    fetch(`https://hero-apps-server-khaki.vercel.app/apps?limit=${limit}&skip=${limit * (currentPage - 1)}&sort=${sort}&order=${order}&search=${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         setapps(data.apps)

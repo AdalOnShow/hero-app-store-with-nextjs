@@ -3,7 +3,7 @@ import Link from "next/link";
 import AppCard from "../AppCard";
 
 async function getData() {
-  const res = await fetch("http://localhost:5000/apps?limit=8");
+  const res = await fetch("https://hero-apps-server-khaki.vercel.app/apps?limit=8");
   return res.json();
 }
 
@@ -23,7 +23,7 @@ const OurApps = async () => {
       </div>
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
         {apps.map((app) => (
-          <AppCard key={app.id} app={app}></AppCard>
+          <AppCard key={app._id} app={app}></AppCard>
         ))}
       </div>
       <div className="text-center">
