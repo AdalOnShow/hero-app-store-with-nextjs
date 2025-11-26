@@ -12,7 +12,7 @@ const Login = () => {
   const [loginLoader, setLoginLoader] = useState(false);
 
   const router = useRouter();
-  const from = "/"; // fixed redirect path
+  const from = "/"; 
 
   const handleSigninError = (error) => {
     switch (error.code) {
